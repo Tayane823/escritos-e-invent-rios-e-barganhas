@@ -1,1 +1,1 @@
-# escritos-e-invent-rios-e-barganhas
+# escritos-e-inventarios-e-barganhas

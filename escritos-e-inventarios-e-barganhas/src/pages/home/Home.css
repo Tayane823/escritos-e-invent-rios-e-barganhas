@@ -1,0 +1,32 @@
+.div-home {
+    background-color: rgba(175, 93, 39, 0.055);
+    color: rgb(49, 46, 46);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.div-home div {
+    width: 50%;
+}
+
+.home-text {
+    margin-top: 6rem;
+    width: 30%;
+    padding: 30px;
+    font-size: 25px;
+    line-height: 1.5em;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+}
+
+.home-text h1 {
+    font-size: 40px;
+    line-height: 1em;
+    font-weight: bold;
+    color: rgba(247, 134, 5, 0.952);
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.home-register-link{    
+    margin-top: 6rem;
+}

@@ -1,0 +1,53 @@
+.div-footer {
+    height: 40vh;
+    background-color: rgb(7, 7, 17);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-footer ul {
+    width: 20vw;
+    padding: 10px;}
+
+.div-footer legend {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.div-footer li {
+    font-size: 20px;
+}
+
+
+.networks-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.techs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fonts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.icon-network {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5%;
+}

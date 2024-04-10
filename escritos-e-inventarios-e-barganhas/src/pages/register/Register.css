@@ -1,0 +1,51 @@
+.div-register {
+    background-color: rgb(247, 247, 248, 0.603);
+    color: rgb(71, 68, 68);
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1.5rem solid rgb(247, 134, 5, 0.952);
+    border-image: url('https://cdn.pixabay.com/photo/2022/09/15/11/14/sea-7456253_1280.jpg') 150;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-register {
+    font-size: 20px;
+}
+
+.div-register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    height: 50vh;
+
+}
+
+.div-register input {
+    width: 90%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(228, 225, 223, 0.479);
+    border: 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.336);
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.btn-register {
+    background-color: rgb(247, 134, 5, 0.952);
+    color: white;
+    font-weight: 800;
+}
+
+.btn-register:hover {
+    background-color: rgba(214, 116, 5, 0.952);
+}
+
+.div-register label {
+    padding: 10px;
+}

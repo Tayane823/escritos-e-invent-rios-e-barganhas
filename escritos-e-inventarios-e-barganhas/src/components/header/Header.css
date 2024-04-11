@@ -1,0 +1,49 @@
+.div-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    height: 15vh;
+    background-color: rgb(7, 7, 17);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.342);
+    
+}
+
+.div-header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    padding: 10px;
+
+}
+
+.div-header h1 {
+    color: rgba(247, 134, 5, 0.952);
+    font-size: 40px;
+    width: 30%;
+    margin: auto;
+}
+
+.header-link {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.header-link:hover {
+    color: #fa5e04;
+}
+
+.link-Login {
+    background: linear-gradient(rgb(7, 7, 17), rgb(7, 7, 17)) padding-box, linear-gradient(to right, #f79757, #fa5e04, #f7170f) border-box;
+    border: 3px solid transparent;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10%;
+    color: white;
+    
+}

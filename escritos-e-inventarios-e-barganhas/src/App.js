@@ -1,16 +1,44 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+ 
+//PAGES
 import Home from './pages/home/Home';
-import Header from './components/header/Header';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
+
+// COMPONENTS
+import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+
+//CONTEXT
 import { AuthProvider } from './context/AuthContext';
 
+//HOOKS
+import { useAuthentication } from './hooks/useAuthentication';
+import { useEffect, useState } from 'react';
+
 function App() {
+
+  const [user, setUser]  = useState(undefined)
+  const { auth } = useAuthentication();
+
+  const loadingUser = user === undefined;
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setUser(user)
+    })
+    
+  }, [auth])
+
+  if (loadingUser) {
+    <p>Carregando...</p>
+  };
+
   return (
     <div className="App">
-      <AuthProvider>
+      <AuthProvider value={{user}}>
         <BrowserRouter>
           <Header />
           <Routes>

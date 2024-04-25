@@ -14,7 +14,7 @@ export const useAuthentication = () => {
     const [error, setError] = useState("")
     const [cancelled, setCancelled] = useState("")
 
-    const auth = getAuth;
+    const auth = getAuth();
 
     //CLEAN MEMORY
     const checkIfIsCancelled = () => {

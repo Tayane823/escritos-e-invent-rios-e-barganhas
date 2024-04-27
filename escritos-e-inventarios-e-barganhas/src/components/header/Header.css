@@ -10,18 +10,25 @@
     
 }
 
-.div-header ul {
+.div-header nav {
+    width: 60%;
+}
+
+.div-header nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 60%;
+    width: 100%;
     padding: 10px;
 
 }
 
-.div-header h1 {
+.div-header h1 a {
     color: rgba(247, 134, 5, 0.952);
+}
+
+.title-header {
     font-size: 40px;
     width: 30%;
     margin: auto;

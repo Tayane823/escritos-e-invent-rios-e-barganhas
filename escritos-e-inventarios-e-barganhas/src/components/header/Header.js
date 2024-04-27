@@ -1,20 +1,37 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css'
+
+import useAuthentication from '../../hooks/useAuthentication'
+import { UseAuthValue } from '../../context/AuthContext'
 
 import React from 'react';
 
 const Header = () => {
+
+  const { user } = UseAuthValue();
+
   return (
     <div className='div-header'>
-      <h1>Escritos e Inventário e Barganhas</h1>
-      <ul>
-        <li><Link to="/" className='header-link'>Livros</Link></li>
-        <li><Link to="/" className='header-link'>Resenhas</Link></li>
-        <li><Link to="/" className='header-link'>Desafio de Leitura</Link></li>
-        <li><Link to="/" className='header-link'>Clube do Livro</Link></li>
-        <li><Link to="/" className='header-link'>Quiz Literário</Link></li>
-        <li><Link to="/login" className='link-Login'>Login</Link></li>
-      </ul>
+      <h1 className='title-header'><Link to="/">Escritos e Inventário e Barganhas</Link></h1>
+      <nav>
+        <ul>
+          {user && (
+            <>
+              <li><NavLink to="/books" className='header-link'>Livros</NavLink></li>
+              <li><NavLink to="/review" className='header-link'>Resenhas</NavLink></li>
+              <li><NavLink to="/challenge" className='header-link'>Desafio de Leitura</NavLink></li>
+              <li><NavLink to="/club" className='header-link'>Clube do Livro</NavLink></li>
+              <li><NavLink to="/quiz" className='header-link'>Quiz Literário</NavLink></li>
+            </>
+          )}
+          {!user && (
+            <>
+              <li><NavLink to="/login" className='link-Login'>Login</NavLink></li>
+            </>
+          )}
+        </ul>
+      </nav>
+     
 
       
     </div>

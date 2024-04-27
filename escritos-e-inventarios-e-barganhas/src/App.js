@@ -1,11 +1,16 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged } from 'firebase/auth';
  
 //PAGES
 import Home from './pages/home/Home';
 import Register from './pages/register/Register';
 import Login from './pages/login/Login';
+import Club from './pages/club/Club'
+import Books from './pages/books/Books'
+import Challenge from './pages/challenge/Challenge'
+import Review from './pages/review/Review';
+import Quiz from './pages/quiz/Quiz'
 
 // COMPONENTS
 import Header from './components/header/Header';
@@ -45,6 +50,11 @@ function App() {
             <Route path='/' element={<Home />}></Route>
             <Route path='/register' element={<Register />}></Route>
             <Route path='/login' element={<Login />}></Route>
+            <Route path='/club' element={<Club /> }></Route>
+            <Route path='/books' element={<Books />}></Route>
+            <Route path='/challenge' element={<Challenge />}></Route>
+            <Route path='/quiz' element={<Quiz />}></Route>
+            <Route path='/review' element={<Review />}></Route>
           </Routes>
           <Footer />
         </BrowserRouter>

@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css'
 
-import useAuthentication from '../../hooks/useAuthentication'
+import { useAuthentication } from '../../hooks/useAuthentication'
 import { UseAuthValue } from '../../context/AuthContext'
 
 import React from 'react';
@@ -9,6 +9,7 @@ import React from 'react';
 const Header = () => {
 
   const { user } = UseAuthValue();
+  const { logout } = useAuthentication()
 
   return (
     <div className='div-header'>
@@ -22,6 +23,7 @@ const Header = () => {
               <li><NavLink to="/challenge" className='header-link'>Desafio de Leitura</NavLink></li>
               <li><NavLink to="/club" className='header-link'>Clube do Livro</NavLink></li>
               <li><NavLink to="/quiz" className='header-link'>Quiz Literário</NavLink></li>
+              <li><button onClick={logout} >Sair</button></li>
             </>
           )}
           {!user && (

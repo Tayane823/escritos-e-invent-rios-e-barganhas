@@ -1,4 +1,3 @@
-import { db } from '../firebase/config'
 import { useEffect, useState } from 'react'
 import {
  getAuth,
@@ -48,7 +47,13 @@ export const useAuthentication = () => {
         }
 
         setLoading(false)
-        
+    }
+
+    //logout - signOut
+    const logout = () => {
+        checkIfIsCancelled();
+
+        signOut(auth)
     }
      
         useEffect(() => {
@@ -59,10 +64,10 @@ export const useAuthentication = () => {
             CreateUser,
             loading,
             error, 
-            auth
-        }
-
-    } 
+            auth,
+            logout
+        };
+    };
 
 
 

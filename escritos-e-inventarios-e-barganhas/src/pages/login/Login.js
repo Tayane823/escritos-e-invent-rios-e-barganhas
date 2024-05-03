@@ -1,8 +1,11 @@
 import React from 'react';
 import './Login.css'
 import BackToHome from '../../components/back/BackToHome';
+import { useAuthentication } from '../../hooks/useAuthentication';
 
 const Login = () => {
+
+  const { error, login } = useAuthentication()
   return (
     <div className='div-login'>
 
@@ -29,7 +32,9 @@ const Login = () => {
             ></input>
         </label>
 
-        <button type='submit' className='btn btn-primary'>Entrar</button>
+        <p>{error}</p>
+
+        <button type='button' className='btn btn-primary' onClick={login}>Entrar</button>
       </form>
     </div>
   );
